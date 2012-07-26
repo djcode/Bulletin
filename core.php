@@ -71,18 +71,14 @@ function SendPageTitle()
  **/
 function getVAR($nm)
 {
-    global $HTTP_GET_VARS, $HTTP_POST_VARS;
-
     $tmp = "";
-
-    if (isset($HTTP_GET_VARS[$nm])) {
-        $tmp = $HTTP_GET_VARS[$nm];
+	if (isset($_COOKIE['bulletin'][$nm])) {
+        $tmp = $_COOKIE['bulletin'][$nm];
+    } elseif (isset($_POST[$nm])) {
+        $tmp = $_POST[$nm];
+	} elseif (isset($_GET[$nm])) {
+        $tmp = $_GET[$nm];
     } 
-
-    if (isset($HTTP_POST_VARS[$nm])) {
-        $tmp = $HTTP_POST_VARS[$nm];
-    } 
-
     return $tmp;
 } 
 
