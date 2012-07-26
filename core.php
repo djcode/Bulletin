@@ -294,17 +294,17 @@ function getDateList($multi=true,$default) {
     }
     $tempdate = mktime (0,0,0,date("m")  ,date("d"),date("Y"));
     if ($tempdate == $default) { $selected="selected"; } else { $selected=""; } 
-	$tempOutput .= "<option value=\"$tempdate\" $selected>Today (".date("jS \o\f F",$tempdate).")</option>";
+	$tempOutput .= "<option value=\"$tempdate\" $selected>Today (".date("jS \of F",$tempdate).")</option>";
 	
 	$tempdate = mktime (0,0,0,date("m")  ,date("d")+1,date("Y"));
 	if ($tempdate == $default) { $selected="selected"; } else { $selected=""; } 
-	$tempOutput .= "<option value=\"$tempdate\" $selected>Tomorrow (".date("jS \o\f F",$tempdate).")</option>";
+	$tempOutput .= "<option value=\"$tempdate\" $selected>Tomorrow (".date("jS \of F",$tempdate).")</option>";
 	
 	for ($i=2; $i<100; $i++) {
 		$tempdate  = mktime (0,0,0,date("m")  ,date("d")+$i,date("Y"));
 		if (date("l",$tempdate)!="Saturday" AND date("l",$tempdate)!="Sunday") {
 			if ($tempdate == $default) { $selected="selected"; } else { $selected=""; } 
-			$tempOutput .= "<option value=\"$tempdate\" $selected>".date("l \\t\h\e jS \o\f F",$tempdate)."</option>";
+			$tempOutput .= "<option value=\"$tempdate\" $selected>".date("l \\t\h\e jS \of F",$tempdate)."</option>";
 		}
 	}
 
