@@ -196,12 +196,11 @@ if (!authenticate($username,$password)) {
             	continue;
             }
 			
-			$tempDate = $getVAR("lstdate");
-                       
-            $tempTitle = getVAR("txttitle");
-			$tempNotice = getVAR("txtnotice");
-			$tempAuthor = getVAR("txtauthor");
-			$tempDateAdded = date("Y-m-d H:i:s",time());
+			$tempDate = getVAR("lstdate");           
+			$tempTitle = mysql_real_escape_string(getVAR("txttitle"));
+			$tempNotice = mysql_real_escape_string(getVAR("txtnotice"));
+			$tempAuthor = mysql_real_escape_string(getVAR("txtauthor"));
+			$tempDateAdded = mysql_real_escape_string(date("Y-m-d H:i:s",time()));
             
 			foreach ($tempDate as $d) {
             	$d = date("Y-m-d",$d);
