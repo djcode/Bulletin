@@ -131,12 +131,12 @@ if (!authenticate($username,$password)) {
             	continue;
             }
 			
-			$tempDate = $HTTP_POST_VARS["lstdate"];
+			$tempDate = getVAR("lstdate");
             $tempTitle = getVAR("txttitle");
 			$tempNotice = getVAR("txtnotice");
 			$tempAuthor = getVAR("txtauthor");
 			$tempImportance = getVAR("lstimportance");
-			$tempUsers = $HTTP_POST_VARS["lstusers"];
+			$tempUsers = getVAR("lstusers");
 			$tempTypeface = getVAR("lsttypeface");
 			$tempFontsize = getVAR("lstfontsize");
 			$tempDateAdded = date("Y-m-d H:i:s",time());
@@ -183,7 +183,7 @@ if (!authenticate($username,$password)) {
             	continue;
             }
 			
-			$tempDate = $HTTP_POST_VARS["lstdate"];
+			$tempDate = $getVAR("lstdate");
                        
             $tempTitle = getVAR("txttitle");
 			$tempNotice = getVAR("txtnotice");
@@ -243,12 +243,12 @@ if (!authenticate($username,$password)) {
 					echo "\n</form>";
 					
 				} else {
-					$tempDate = $HTTP_POST_VARS["lstdate"];
+					$tempDate = getVAR("lstdate");
 		            $tempTitle = getVAR("txttitle");
 					$tempNotice = getVAR("txtnotice");
 					$tempAuthor = getVAR("txtauthor");
 					$tempImportance = getVAR("lstimportance");
-					$tempUsers = $HTTP_POST_VARS["lstusers"];
+					$tempUsers = getVAR("lstusers");
 					$tempTypeface = getVAR("lsttypeface");
 					$tempFontsize = getVAR("lstfontsize");
 					$tempDateAdded = date("Y-m-d H:i:s",time());
@@ -311,7 +311,7 @@ if (!authenticate($username,$password)) {
 					echo "\n</table>";
 					echo "\n</form>";
 				} else {
-					$tempDate = $HTTP_POST_VARS["lstdate"];
+					$tempDate = getVAR("lstdate");
 		            $tempTitle = getVAR("txttitle");
 					$tempNotice = getVAR("txtnotice");
 		            
