@@ -324,17 +324,16 @@ if (!authenticate($username,$password)) {
 					echo "\n</form>";
 				} else {
 					$tempDate = getVAR("lstdate");
-		            $tempTitle = getVAR("txttitle");
-					$tempNotice = getVAR("txtnotice");
-		            
+					$tempTitle = mysql_real_escape_string(getVAR("txttitle"));
+					$tempNotice = mysql_real_escape_string(getVAR("txtnotice"));
+
 		            foreach ($tempDate as $d) {
-            			$d = date("Y-m-d",$d);
+						$d = date("Y-m-d",$d);
 						$query = "UPDATE $events_table SET event='$tempTitle',details='$tempNotice', event_date='$d' WHERE ID=$id";
 	            		$result = do_mysql_query($query);
 					
 						echo send_notice("OK","Event edited.");
-		            }
-
+					}
 				}
 			}
 			break;
