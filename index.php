@@ -396,7 +396,7 @@ if (!authenticate($username,$password)) {
 	} // switch
 
 	
-	echo "\n<h2>Notices for ".date("l \\t\h\e jS \o\f F",$display_date)."</h2>";
+	echo "\n<h2>Notices for ".date("l \\t\h\e jS \of F",$display_date)."</h2>";
 	
 	$query = "SELECT * FROM $notices_table WHERE display_date='".date("Y-m-d",$display_date)."' ORDER BY date_added";
 	//echo $query."<br>";
