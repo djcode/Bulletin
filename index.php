@@ -24,6 +24,19 @@ if (!getVAR("display_date")) {
 	$display_date = getVAR("display_date");
 }
 
+if (isset($_GET['action'])) {
+	if ($_GET['action']=="logout") {
+		setcookie ("bulletin[username]", "", time() - 3600);
+		setcookie ("bulletin[password]", "", time() - 3600);
+		header("Location: ./");
+	}
+}
+if (isset($_POST['txtusername']) && isset($_POST['txtpassword'])) {
+	if (authenticate($_POST['txtusername'], md5($_POST['txtpassword']))) {
+		setcookie('bulletin[username]', $_POST['txtusername']);
+		setcookie('bulletin[password]', md5($_POST['txtpassword']));
+	}
+}
 if (getVAR("username")) {
     $username = getVAR("username");
 	$password = getVAR("password");
