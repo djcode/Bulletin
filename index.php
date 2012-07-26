@@ -145,14 +145,14 @@ if (!authenticate($username,$password)) {
             }
 			
 			$tempDate = getVAR("lstdate");
-            $tempTitle = getVAR("txttitle");
-			$tempNotice = getVAR("txtnotice");
-			$tempAuthor = getVAR("txtauthor");
-			$tempImportance = getVAR("lstimportance");
+			$tempTitle = mysql_real_escape_string(getVAR("txttitle"));
+			$tempNotice = mysql_real_escape_string(getVAR("txtnotice"));
+			$tempAuthor = mysql_real_escape_string(getVAR("txtauthor"));
+			$tempImportance = mysql_real_escape_string(getVAR("lstimportance"));
 			$tempUsers = getVAR("lstusers");
-			$tempTypeface = getVAR("lsttypeface");
-			$tempFontsize = getVAR("lstfontsize");
-			$tempDateAdded = date("Y-m-d H:i:s",time());
+			$tempTypeface = mysql_real_escape_string(getVAR("lsttypeface"));
+			$tempFontsize = mysql_real_escape_string(getVAR("lstfontsize"));
+			$tempDateAdded = mysql_real_escape_string(date("Y-m-d H:i:s",time()));
 			
     		$msg=""; 
 			foreach ($tempDate as $d) {
