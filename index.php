@@ -256,9 +256,9 @@ if (!authenticate($username,$password)) {
 					
 				} else {
 					$tempDate = getVAR("lstdate");
-		            $tempTitle = getVAR("txttitle");
-					$tempNotice = getVAR("txtnotice");
-					$tempAuthor = getVAR("txtauthor");
+		            $tempTitle = mysql_real_escape_string(getVAR("txttitle"));
+					$tempNotice = mysql_real_escape_string(getVAR("txtnotice"));
+					$tempAuthor = mysql_real_escape_string(getVAR("txtauthor"));
 					$tempImportance = getVAR("lstimportance");
 					$tempUsers = getVAR("lstusers");
 					$tempTypeface = getVAR("lsttypeface");
