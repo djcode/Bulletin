@@ -17,7 +17,7 @@ CREATE TABLE `sb_events` (
   `date_added` datetime NOT NULL default '0000-00-00 00:00:00',
   `author` text NOT NULL,
   PRIMARY KEY  (`ID`)
-) TYPE=MyISAM AUTO_INCREMENT=1 ;
+) AUTO_INCREMENT=1 ;
 
 #
 # Table structure for table `importance`
@@ -27,7 +27,7 @@ CREATE TABLE `sb_importance` (
   `ID` int(11) NOT NULL auto_increment,
   `importance` text NOT NULL,
   PRIMARY KEY  (`ID`)
-) TYPE=MyISAM AUTO_INCREMENT=3 ;
+) AUTO_INCREMENT=3 ;
 
 #
 # Dumping data for table `importance`
@@ -55,7 +55,7 @@ CREATE TABLE `sb_notices` (
   `size` int(11) NOT NULL default '0',
   `author` text NOT NULL,
   PRIMARY KEY  (`ID`)
-) TYPE=MyISAM AUTO_INCREMENT=1 ;
+) AUTO_INCREMENT=1 ;
 
 #
 # Table structure for table `permissions`
@@ -66,7 +66,7 @@ CREATE TABLE `sb_permissions` (
   `notice_id` int(11) NOT NULL default '0',
   `user_id` int(11) NOT NULL default '0',
   PRIMARY KEY  (`ID`)
-) TYPE=MyISAM AUTO_INCREMENT=1 ;
+) AUTO_INCREMENT=1 ;
 
 #
 # Table structure for table `settings`
@@ -77,7 +77,7 @@ CREATE TABLE `sb_settings` (
   `name` text NOT NULL,
   `value` text NOT NULL,
   PRIMARY KEY  (`ID`)
-) TYPE=MyISAM AUTO_INCREMENT=1 ;
+) AUTO_INCREMENT=1 ;
 
 #
 # Table structure for table `users`
@@ -89,7 +89,7 @@ CREATE TABLE `sb_users` (
   `password` text NOT NULL,
   `realname` text NOT NULL,
   PRIMARY KEY  (`ID`)
-) TYPE=MyISAM AUTO_INCREMENT=5 ;
+) AUTO_INCREMENT=5 ;
 
 #
 # Dumping data for table `users`
