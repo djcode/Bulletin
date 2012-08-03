@@ -1,11 +1,3 @@
-# phpMyAdmin SQL Dump
-# version 2.5.5
-# http://www.phpmyadmin.net
-#
-# Host: localhost
-# Generation Time: Mar 19, 2004 at 07:42 PM
-# Server version: 4.0.15
-# PHP Version: 4.3.4
 # 
 # Database : `bulletin`
 # 
