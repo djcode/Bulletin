@@ -1,6 +1,6 @@
 This is a fork of cgoerner's Bulletin (http://sourceforge.net/projects/schoolreports)
 It features:
-* Better compatibility with new PHP 5!
+* Better compatibility with PHP 5!
 * Fixes problems with quotes in notices!
 * Cookie support!
 * Other things I haven't thought of!
