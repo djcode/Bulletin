@@ -170,7 +170,7 @@ function sendNavBar($links,$username,$password,$display_date) {
 				echo "<td align=center><a href=\"$PHP_SELF?display_date=$display_date&edit=on&username=$username&password=$password\">Edit Mode</a></td>";
 				break;
 			case "logout": 
-				echo "<td align=center><a href=\"index.php\">Log Out</a></td>";
+				echo "<td align=center><a href=\"$PHP_SELF?action=logout\">Log Out</a></td>";
 				break;
 			case "create_notice": 
 				echo "<td align=center><a href=\"$PHP_SELF?action=create_notice&display_date=$display_date&username=$username&password=$password\">Create Notice</a></td>";
